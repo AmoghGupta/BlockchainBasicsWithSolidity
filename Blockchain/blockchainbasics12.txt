@@ -1,0 +1,25 @@
+Solidity struts:
+
+Struct is a collection of key-value pairs. 
+Similar to mappings but the values can have different types. 
+Represents a singular thing.
+
+example:
+struct Car{
+    string brand;
+    uint built_year;
+    uint value;
+}
+
+Car public private_car;
+
+Struct is stored in "STORAGE"
+
+
+Solidity enums:
+Enums are used to create user defined types.
+are explicitly convertible to and from int.
+
+enums State{Running, Stopped, Inactive}
+
+State public status = State.Running

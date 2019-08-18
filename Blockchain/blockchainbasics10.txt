@@ -1,0 +1,22 @@
+Solidity variables:
+
+1. boolean - true/false
+    bool public sold;
+
+by default bool is false
+
+2. integers
+
+signed int and unsigned int
+
+signed int can be from int8 to int256
+int8 -  means 8bits i.e -128 to 127
+int16 i.e -32768 to +32767
+int is an alias to int256
+
+unsigned int
+uint is an alias to uint256
+
+by default an int is 0
+
+3. there is no support for float/double  in solidity

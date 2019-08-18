@@ -1,0 +1,25 @@
+//transferring the contract balance
+
+
+address public owner;
+
+constructor() public{
+    // whoever deploys the contract
+    // register the owner so that no one is able to transfer the balance except the owner
+    owner = msg.sender;
+}
+
+
+
+function transfer_balance(address receipient_addrees, uint amount) public returns bool{
+    if(msg.sender == owner){
+        if(amount <= get_balance()){
+            receipient_addrees.transfer(amount);
+            return true;
+        }else{
+            return false;
+        }
+    }else{
+        return false;
+    }
+}

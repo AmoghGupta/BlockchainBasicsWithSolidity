@@ -1,0 +1,26 @@
+Variables:
+1. its statically typed, you have to give the data types.
+
+2. State variables and local variables.
+
+3. State variables are permanently stored in contract storage, declared at contract level.
+These are not dynamically allocated. State variables use storage. 
+
+All state variables need to be created before deployment thats why these are not 
+dynamically allocated.
+
+Initialized at declaration using a constructor or after contract deployment by calling setters.
+expensive to use as they cost gas.  They are saved on ethereum blockchain.
+
+
+4. Local variables are at function level. temporary values. Created dynamically.
+Struct, Arrays or mappings they take storage memory by default even if they 
+are at function level.
+If you add a memory keyword then the variables will be allocated at run time. 
+memory keywords donot work with state variables.
+
+
+EVM (ETHEREUM VIRTUAL MACHINE)  has three memories:
+1. storage - persistent and expensive like ROM. takes storage on ethereum blockchain.
+2. memory - temporary values,free to use. likes RAM
+3. stack- holds function variables, free to use

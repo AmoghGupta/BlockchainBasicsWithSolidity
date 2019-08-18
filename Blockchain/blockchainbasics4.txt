@@ -1,0 +1,35 @@
+Rinkeby testnet
+1. in order to receive test ethers: https://faucet.rinkeby.io/  Do the process as mentioned and 
+get free test ethers on your account.
+
+this is because to prevet attack on test network by hackers.
+
+2. now once you receive the test ethers you can use it.
+
+
+Deploying smart contracts using remix editor and metamask plugin:
+1. Open https://remix.ethereum.org
+2. remix website tries to connect to metamask to establish a connection with your account.
+"Remix - Ethereum IDE would like to connect to your account"
+select connect
+3. you will notice that the remix ide has connected to the metamask and you can see that the
+IDE has your metamask details.. go to RUN and see the
+environment (injectedweb3, because metamask injects web3 into this page that connects to 
+ethereum node)  and account details (test ethers you hold).
+
+4. now click on deploy. (deploy you .sol code) (i have used the sol code that is present here
+in solidity1)
+5. metamask window opens for confirmation. accept the deployment.
+6. an etherscan link is generated for example:
+https://rinkeby.etherscan.io/tx/0xa4609774cb5ad60a54ce6cae57a71f8273b87fd4a2b3eab9c7af65a4f6e6e9d9
+
+7. go to the URL to see the txn details.
+8. wait for the txn to be mined. once mined and confirmed the contract is deployed. :)
+
+You will see something like:
+
+[Contract 0x2d011568aba07d1d58c7551131a002ae1d09a181 Created] 
+
+click on the contract URL. if somewants to interact with the contract he would need this 
+CONTRACT ADDREES IS: 0x2D011568AbA07D1D58c7551131a002AE1D09a181
+

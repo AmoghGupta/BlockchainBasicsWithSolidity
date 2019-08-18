@@ -1,0 +1,47 @@
+// function modifiers
+1. these are test conditions before calling a function.
+2. function is called only if the condition is true
+3. we avoid redundant code and possible errors
+4. they are contract properties and  inherited.
+5. they don't return and use only require
+6. defined using modifier keyword
+
+
+
+pragma solidity ^0.5.1;
+
+contract Property{
+    
+    uint public price = 9000;
+    string public location = "Hamburg";
+    address public owner;
+    
+    // whoever deploys the contract becomes the owner
+    // constructor runs only once at the time of deployment
+    constructor() public{
+       //calls the constructor
+        owner = msg.sender;
+    } 
+    
+    //function modifier
+    modifier onlyOwner{
+         require(msg.sender == owner);
+         _;
+    }
+    
+    function getBalance() view public onlyOwner returns (uint){
+        return address(this).balance;
+    }
+    
+    function setPrice(uint _price) onlyOwner public {
+         require(_price > price);
+         price = _price;
+    } 
+    
+    function setLocation(string memory _location) onlyOwner public {
+         location = _location;
+    } 
+    
+    
+    
+}

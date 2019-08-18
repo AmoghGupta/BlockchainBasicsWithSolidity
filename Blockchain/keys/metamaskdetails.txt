@@ -1,0 +1,12 @@
+Secret Backup Phrase
+Your secret backup phrase makes it easy to back up and restore your account.
+WARNING: Never disclose your backup phrase. Anyone with this phrase can take your Ether forever.
+
+
+
+
+mnemonic(12 seed words) is what we must have as a backup, thats enough to restore our accounts:
+
+mnemonic:
+
+caution mention delay destroy embark farm stand boy ticket twelve sheriff industry

@@ -1,0 +1,17 @@
+Solidity Mappings:
+
+Its a data structure that holds key value pairs, similar to object in JS.
+All keys must have same types and all values must have same types.
+Mappings are always stored in "STORAGE".
+
+Mappings declared inside functions are also stored in "STORAGE".
+
+we cannot iterate mapping.
+its a hash table inside.
+unexisting key has a default value.
+
+
+mapping(key_type=>value_type) access_modifier mapping_name;
+
+mapping(address=>uint) public bids;
+

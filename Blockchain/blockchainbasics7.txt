@@ -1,0 +1,11 @@
+Solidity basics:
+
+1. Solidity is a high level statically typed programming lang.
+2. solc is the Solidity compiler.
+3. case sensitive.
+4. ends with semicolon.
+5. uses curly braces {}
+6. // for comments
+7. /* */
+8. /// documentation comments
+9. most of the control structures are availaible if, else, while, for, break, continue etc

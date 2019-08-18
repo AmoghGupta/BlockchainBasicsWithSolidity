@@ -1,0 +1,67 @@
+Contract Address:
+
+1. every contract has its own unique Address that is generated at deployment.
+2. contract Address is calculated based on the Address of the creator of the contract + no. of txns
+of that account(nonce). 
+3. Address variable has the following values:
+address(this).balance,  // gives the balance of the smart contract // gives in wei
+address(this).transfer,
+address(this).send,
+address(this).call, 
+address(this).callcode,
+address(this).delegatecall
+
+
+4. A smart contract can receive ether  and can have an ether balance only if there
+is  a payble function defined.
+
+5. Contract receives ether in 2ways:
+a. by calling payble function and sending eth with that txn.
+b. just by sending eth  to the contract by EOA account, if the contract has a fallback 
+payble function.
+payble fallback  function is a function without name but payble. the fallback function
+can't have args and cant return. there is only one.
+
+6. eth balance of the contract is in posession of anyone  who can call the transfer() built in function.
+
+7. if you try to send ether to a contract that doesn't have payble method
+the txn will fail.
+
+
+
+-------------------------------------------------------------------------------------------
+1st Method: By EOA
+
+function getbalance() view public returns (uint) {
+    return address(this).balance;
+}
+
+//fallback payble function
+// its a anonymous function since it doesn't have a name
+// we can have only one fallback payble function
+function () payble public{
+    location = "London";
+}
+
+//now our smart contract can hold ether balance becuase we have a payble function now
+
+1. get the contract address.
+2. go to some EOA where you have some ether and send to the contract address.
+3. run getbalance to check the balance
+
+
+-------------------------------------------------------------------------------------------
+2nd Method: by calling payble function and sending eth with that txn.
+
+function sendEther() payble public {
+    price = 600;
+}
+
+1.deploy contract
+2. put the value = 200wei
+3. run sendEther function
+4. run getbalance to check the balance
+
+-------------------------------------------------------------------------------------------
+
+

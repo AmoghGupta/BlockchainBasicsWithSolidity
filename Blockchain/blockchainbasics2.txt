@@ -1,0 +1,25 @@
+1. EVM (ethereum virtual machine) opcodes
+
+2. WEB3EDEPLOY: 
+this is how the contract will be deployed using web3.
+
+3. METAMASK: 
+It is a browser plugin that allows users to make ethereum transactions through regular
+websites.
+It connects regular web to ethereum, it acts like a bridge.
+MetaMask is a bridge that allows you to visit the distributed web of tomorrow in your browser 
+today. 
+It allows you to run Ethereum dApps right in your browser without running a 
+full Ethereum node.
+Regular browsers don't know how to connect to ethereum nodes and read/write on ethereum blockchain.
+MetaMask helps us in doing that.
+It injects a library called web3.js into the namespace of each page the browser loads.
+Web3 was written by ethereum devs.
+
+Install metamask plugin.
+Save the mnemonic.
+Generate multiple accounts. (all would require the same mnemonic to restore).
+
+It can connect to main networks and test networks.
+
+

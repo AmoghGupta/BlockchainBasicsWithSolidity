@@ -1,0 +1,8 @@
+Smart contract architecture:
+
+1. 1st instruction is the pragma (version of the compiler)
+2. 2nd is Smart contract name (this is not saved with name on blockchain, smart contract
+is identified by the contract address generated on deployment)
+3. State variables. (saved on ethereum blockchain)
+4. constructor (called only once at the time of deployment)
+5. member functions contract interface(through which we interact with the contract)

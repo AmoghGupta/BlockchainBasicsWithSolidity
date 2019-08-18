@@ -1,0 +1,29 @@
+Remix IDE/browser IDE online available:
+https://remix.ethereum.org/
+1. Remix IDE/browser- programming, debugging, deployment and testing of smart contracts.
+2. Remix is available online. Remix.ethereum.org\
+3. Convert solidity code to bytecode needed to deploy the ethereal smart contract. 
+(It has a compiler)
+
+solidity: is a programming language for creating ethereum smart contracts.
+extension of solidity: .sol
+
+.sol (source code)====compiler compiles to==> bytecode===> deployed to ethereum blockchain
+
+.sol(source code) on compilation generates:
+1. bytecode
+2. ABI (ABSTRACT BINARY INTERFACE) its a list of contracts functions and args in JSON format.
+
+Contract bytecode is public. Souce code may or may not be public.
+Opcodes (operation codes) are human readable instructions.
+
+you can also install solc: solcjs is a Node.js library and command-line tool that is used to 
+compile solidity files. 
+
+
+
+
+
+
+
+

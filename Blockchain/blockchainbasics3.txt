@@ -1,0 +1,14 @@
+Test networks:
+
+1. Select the Rinkeby test network in metamask.
+
+now to test it:
+a. goto myetherwallet.com
+b. select Rinkeby network in the website.
+c. create an account if not created, save the key file.
+d. login with the newly created account and go to send ether 
+e. copy address from metamask accounts and paste it to myetherwallet and send.
+
+
+
+

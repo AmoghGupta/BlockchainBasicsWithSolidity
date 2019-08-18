@@ -1,0 +1,67 @@
+Visibilities:
+
+Public:  can be called both internally and externally. function is a part of contract interface.
+getter is automatically created for a public variable.
+
+
+Private: function are avaialible only in the contract they are defined in. 
+This is default for the state variables, can be accessed by getter functions only.
+
+Internal : can be accessed from the current and the derived contract, not externally.
+
+External: can be accessed only from other contracts or by EOA contracts using transactions.
+are more effecient than public functions in terms of gas consumption.
+
+
+contract A{
+    int x = 8; //by default private and internal
+
+    int public y = 10;  // public 
+
+    function f1() public view returns(int){
+        return x;
+    }
+
+    function f2() private view returns(int){
+        return x;
+    }
+
+    function f3() private view returns(int){
+        int a;
+        a = f4();
+        return a;
+    }
+
+    function f4() internal view returns(int){
+       return x;
+    }
+
+    function f5() external view returns(int){
+       return x;
+    }
+
+    function f6() public view returns(int){
+        return f5();      // error ..external cannot be called from inside
+    }
+}
+
+contract B {
+    A public contract_A  = new A(); //contract B deploys contract A
+    int public xx = contract_A.f1();
+
+    int public xy = contract_A.f2();  /*** ERROR F2 IS Private ***/
+
+    int public xxx = contract_A.f4(); /*** ERROR canbe called from derived contract only ***/
+
+
+}
+
+
+contract C is A {
+  
+    int public xxx = contract_A.f4();  // works
+
+    int public xxx = contract_A.f5(); //works, external can called from other contracts
+}
+
+

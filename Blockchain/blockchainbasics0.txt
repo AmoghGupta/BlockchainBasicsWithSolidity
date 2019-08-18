@@ -1,0 +1,84 @@
+BASIC TERMINOLOGIES:
+--------------------------
+1. ethereum: is a blockchain platform.
+2. eth: its a token on ethereum blockchain
+3. GAS: fees paid for doing operations. more costlier operations, you need to pay more gas as fees
+   Gas is a measure of the computational power needed to execute the transaction.
+4. gas cost = (gas * gas price)  measured in Gwei.
+5. wei: smallest unit of ether. ex: cents in dollars similarly wei in ether.
+    1 ether = 1e18 wei
+    1 Gwei = 1e9 wei
+
+6. Types of accounts:
+EOA (Externally owned accounts) - has private keys
+Contract accounts. - no private keys associated with contract accounts
+
+6. Ethereum address is generated from users public key.
+
+7. An ethereum node is a machine that runs ethereum client like geth or mist.
+8. GETH: Geth is an implementation of an Ethereum node in the Go programming language.
+Geth is a program which serves as a node for the Ethereum blockchain, and via which a user can mine Ether and create software which runs on the EVM – the Ethereum Virtual Machine.
+Geth will connect to the existing live blockchain or create its own, depending on provided settings.
+Left at the default values, Geth will connect to the live Ethereum blockchain (the Mainnet) which we use daily.
+Simply by running Geth, you're already participating in making the Ethereum network better and stronger. 
+Geth also serves as a console for inputting certain commands and executing specific functions. 
+
+
+9. MIST: simple UI tool. Mist is a program which connects to Geth in the background.
+When Geth is running, it synchronizes with the public blockchain by downloading all its data. Mist is just a human-friendly interface for talking to Geth.
+
+Geth is both your node and your wallet, but instead of talking to it through obscure commands (i.e. web3.fromWei(eth.getBalance(eth.coinbase)) to get an account's balance), Mist will provide that same information in the UI without you even having to ask for it.
+
+10. proof of work (PoW). PoW is a competitive activity that miners undertake to write transactions to a new block that will be added to the blockchain. 
+A miner successfully mines a new block while competing with fellow miners by running a hashing script.
+
+
+11. The developers behind the ethereum blockchain are working on shifting the mining algorithm from Proof of Work to Proof of Stake (PoS). PoS allows for the creation of new blocks with the expensive process of PoW mining. 
+
+“In PoS, each node participates in the consensus mechanism in a proportional manner to the stake (of the Ethereum blockchain) held by it.
+With this shift to PoS, the block reward goes away and the miners are paid only in the form of transaction fees. 
+
+
+POW => solve complex algo using hardware to mine the block. costlier process.
+POS => more ether you own, more easily you are able to mine the block.
+
+12. Ethereum full nodes execute the ethereum txns.
+
+13. gasPrice and gasLimit of a transaction are set by the account who generates the txn.
+
+14. if enough gas is not there the txn consumes all the gas and fails.
+
+15. Any interaction with ethereum blockchain means a transaction.
+
+16. Client constructs a transaction, signs and validates it locally, txn is then BROADCASTED
+to the network by the ETHEREUM CLIENT and  a TRANSACTION ID is returned, miner node accepts the txn.
+Ethereum has both miner and non miner nodes. The txn is added to the TRANSACTION POOL and waits
+there to be validated by the miner. Transaction in the pool are sorted by gas price.
+
+17. all pending txns can be seen in the etherscan.io
+
+18. Now miner finds a block by solving the POW puzzle and adds the new block to the existing
+blockchain. The number of txns in the block depends on the block gas limit.
+
+19. Miner node broadcasts the new block to all other nodes, all nodes execute the transactions
+from the new block, but only miner gets paid. (block reward+txn fees in GAS)
+
+20. A block is confirmed final after 12confirmations (validations) in blockchain.
+
+21. Transaction fields:
+{
+    from: (sender address),
+    to: (receipient address),
+    value: (amount of ether), (not mandatory some txn do not require any ether for exp: 
+    deploying smart contract, value could be 0
+    )
+    gasLimit: (maximum number of computation a txn is allowed to perform),
+    gasPrice: (how many wei do I aggree to pay on gas unit),
+    data: (contains the contract bytecode if this txn deploys a new contract/ its empty
+            if simple eth is sent from one account to other),
+    nonce: (is a counter that starts with 0 for every account and then is incremented by every
+            txn and gurantees that the txn is not sent twice)
+}
+
+22. anything that modifies the blockchain is a txn and wil cost you, but a call is different
+from txn, it doesnt modify the blockchain and is free. for example a get call.

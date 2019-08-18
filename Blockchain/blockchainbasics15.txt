@@ -1,0 +1,17 @@
+Global variables:
+
+1. msg: 
+sender, 
+value, 
+gas==> replaced by gasleft() 
+data
+
+msg.value is in wei
+
+2. this: the current contract 
+
+3. block.timestamp alias for now, returns unix epoc
+4. block.number
+5. block.difficulty
+6. block.gaslimit
+7. tx.gasprice

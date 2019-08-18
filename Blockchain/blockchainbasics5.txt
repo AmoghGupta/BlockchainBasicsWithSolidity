@@ -1,0 +1,17 @@
+Interacting with the deployed contract:
+
+1. Go to https://remix.ethereum.org
+2. Go to run
+3. go to 'at address' and paste the contract address to load the  contract from that address.
+click the button.
+4. It loads the contracts details (ABI), for example the functions, variables.
+Now if you perform some operations on the contract. example: setLines and pass some value,
+now this function will modify the blockchain, it creates a txn and for that you need to pay.
+Metamask window opens, you can set the gas you want to pay and you can submit the txn.
+
+Txn link is generated for exmple:https://rinkeby.etherscan.io/tx/0x91ee80c358911fc119bf49ed5fd6e5d86dd9d80c11f34800b3ceaa7fa40f9ecb
+we can wait for the txn to be mined. once it has been mined you can check that the operation on
+the contract is successful. now if you do a get operation you will get the value which was set.
+
+this txn has been created, generated and signed by the user account created by metamask 
+and sent to the contract address.

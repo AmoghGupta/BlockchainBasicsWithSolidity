@@ -1,0 +1,36 @@
+Solidity arrays:
+
+1. Fixed array:
+compile time fixed size.
+-----------------------------------------------------------------
+bytes1, bytes2, bytes3... bytes32
+int8 to int256
+uint8 to uint256
+
+
+bytes2 public x; // fixed size array of 2 bytes
+bytes3 public y; // fixed size array of 3 bytes
+
+x = 'ab'; // stores in form of hexadecimals  0x 61 62 (0x6162)
+y = 3; // stores y as 0x 00 00 10
+
+byte is an alias for bytes 1
+-----------------------------------------------------------------
+
+array integer
+ 
+ int[3] public x;
+
+ int[3] public x = [10,20,30]
+-----------------------------------------------------------------
+2. Dynamically sized arrays: we don't know the size at compile time
+
+byte[]
+byte[] is an alias to bytes
+
+uinit[], int[]
+
+
+
+fixed size arrays are cheaper.
+

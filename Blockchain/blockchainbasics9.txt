@@ -1,0 +1,19 @@
+Solidity functions:
+
+1. functions create the contract interface.
+2. 
+Setter:  is a function that modifies state variable. Modifies blockchain
+function functioName(args list) visibility_specifier{
+
+}
+
+3.
+Getter: is function to get values, it doesn't modifies state variable. 
+It doesnt modify the blockchain.
+
+function functioName(args list) visibility_specifier view returns(return type){
+
+}
+
+
+getters are free they are "calls" not "transactions". they don't cost gas.

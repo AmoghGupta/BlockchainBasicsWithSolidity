@@ -1,0 +1,22 @@
+Solidity constructor:
+
+-special function that is executed when the contract is deployed 
+- setting initial state variable values
+- only one
+- optional
+- to register the address that created the smart contract (owner of smart contract)
+- constructor is optional (internally a default constructor is created if not created)
+
+
+-msg is a global variable
+- msg.sender gives the owner address of the smart contract
+
+constructor() public{
+    owner = msg.sender;
+}
+
+
+
+
+View keyword:
+The view keyword means that the function doesn't modify the blockchain.
